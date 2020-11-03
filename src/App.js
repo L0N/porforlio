@@ -1,6 +1,7 @@
 import './App.css';
 import { Component } from 'react';
 import { About } from './components/about'
+import { Contact } from './components/contact'
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
           </nav>
           < About />
           <div>projects</div>
-          <div>contact</div>
+          < Contact />
         </main>
       </div>
     );
