@@ -3,7 +3,7 @@
 const Contact = () => {
     console.log("Contact component ran");
     return (
-        <div className="Contact-section">
+        <div className="Contact-section three-col">
             <h3>Contact</h3>
             <p>
                 You can contact me with the information below

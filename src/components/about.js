@@ -3,7 +3,7 @@
 const About = () => {
     console.log("About component ran");
     return (
-        <div className="about-section">
+        <div className="about-section three-col">
             <h3>About</h3>
             <p>
                 This is abit about me
