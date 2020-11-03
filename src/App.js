@@ -1,9 +1,15 @@
 import './App.css';
 import { Component } from 'react';
 import { About } from './components/about'
+import { Projects } from './components/projects'
 import { Contact } from './components/contact'
 
 class App extends Component {
+
+  state = {
+    mainSectionHeading: "This is the main section heading"
+  }
+
   render() {
     console.log("The page is rendering")
     return (
@@ -21,7 +27,7 @@ class App extends Component {
             </ul>
           </nav>
           < About />
-          <div>projects</div>
+          < Projects />
           < Contact />
         </main>
       </div>
