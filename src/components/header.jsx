@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-class header extends Component {
+class headerComponent extends Component {
     render() {
+        console.log("Header component ran")
         return (
             <div>
                 <h1 className="portfolio-title">Frank Manue Jr</h1>
@@ -11,4 +12,4 @@ class header extends Component {
     }
 }
 
-export default header;
+export default headerComponent;
