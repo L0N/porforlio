@@ -3,7 +3,8 @@ import { Component } from 'react';
 import { About } from './components/about'
 import { Projects } from './components/projects'
 import { Contact } from './components/contact'
-import headerComponent from './components/header'
+import Header from './components/header'
+import Books from '.components/books'
 
 class App extends Component {
 
@@ -56,7 +57,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          < headerComponent />
+          < Header />
         </header>
         <main className="main-section">
           <h3>Portfolio</h3>
@@ -96,7 +97,7 @@ class App extends Component {
             }
           </div>
           <div>
-            < books />
+            < Books />
           </div>         
         </main>
       </div>

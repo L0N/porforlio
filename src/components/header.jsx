@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class headerComponent extends Component {
+class Header extends Component {
     render() {
         console.log("Header component ran")
         return (
@@ -12,4 +12,4 @@ class headerComponent extends Component {
     }
 }
 
-export default headerComponent;
+export default Header;
