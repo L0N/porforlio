@@ -7,7 +7,47 @@ import { Contact } from './components/contact'
 class App extends Component {
 
   state = {
-    mainSectionHeading: "This is the main section heading"
+    mainSectionHeading: "Portfolio",
+    mainSubSectionHeading: "Frank Manue Jr",
+    showAbout: false,
+    showProjects: false,
+    showContacts: false
+  }
+
+  handleClickAbout = () => {
+    this.setState((prevState) => {
+      const aboutToggle = !prevState.showAbout;
+      console.log("Click About")
+      return {
+        showAbout: aboutToggle,
+        showProjects: false,
+        showContacts: false
+      }
+    })
+    
+    this.handleClickProjects = () => {
+      this.setState((prevState => {
+        const projectsToggle = !prevState.showProjects;
+        console.log("Click Projects")
+        return {
+          showProjects: projectsToggle,
+          showAbout: false,
+          showContacts: false
+          }
+      }))
+    }
+    
+    this.handleClickContact = () => {
+      this.setState((prevState => {
+        const contactToggle = !prevState.showContacts;
+        console.log("Click Contacts")
+        return {
+          showContacts: contactToggle,
+          showAbout: false,
+          showProjects: false
+        }
+      }))
+    }
   }
 
   render() {
@@ -15,20 +55,45 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2 class="portfolio-title">Frank Manue Jr</h2>
+          <h2 className="portfolio-title">Frank Manue Jr</h2>
         </header>
         <main className="main-section">
-          <h3>Main Section</h3>
+          <h3>Portfolio</h3>
           <nav>
             <ul className="nav-title">
-              <li>about</li>
-              <li>projects</li>
-              <li>contact</li>
+              <li onClick={this.handleClickAbout}>about</li>
+              <li onClick={this.handleClickProjects}>projects</li>
+              <li onClick={this.handleClickContact}>contact</li>
             </ul>
           </nav>
-          < About />
-          < Projects />
-          < Contact />
+          
+          <div>
+            {
+              (this.state.showAbout)
+              ?
+              < About />
+              :
+              ""
+            }
+          </div>
+          <div>
+            {
+              (this.state.showContacts)
+              ?
+              < Contact />
+              :
+              ""
+            }
+          </div>
+          <div>
+            {
+              (this.state.showProjects)
+              ?
+              < Projects />
+              :
+              ""
+            }
+          </div>         
         </main>
       </div>
     );
