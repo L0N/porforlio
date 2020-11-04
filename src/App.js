@@ -3,6 +3,7 @@ import { Component } from 'react';
 import { About } from './components/about'
 import { Projects } from './components/projects'
 import { Contact } from './components/contact'
+import headerComponent from './components/header'
 
 class App extends Component {
 
@@ -55,7 +56,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h2 className="portfolio-title">Frank Manue Jr</h2>
+          < headerComponent />
         </header>
         <main className="main-section">
           <h3>Portfolio</h3>
@@ -93,6 +94,9 @@ class App extends Component {
               :
               ""
             }
+          </div>
+          <div>
+            < books />
           </div>         
         </main>
       </div>
