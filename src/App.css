@@ -39,6 +39,20 @@
   justify-content: space-evenly;
 }
 
+.book-list {
+  width: 80%;
+  background-color: wheat;
+  margin: 15px auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.book-list:hover{
+  background-color: black;
+  color: wheat;
+  cursor: pointer;
+}
+
 /* .three-col {
   float: left;
   width: 33.33%;
